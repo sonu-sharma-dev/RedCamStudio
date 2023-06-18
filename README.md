@@ -1,5 +1,5 @@
 # RedCamStudio
-RedCamStudio is a web-based application built to assist studio owners in managing expenses, bookings, clients, and generating invoices. This README file provides an overview of the application's features, technologies used, and installation instructions.
+RedCamStudio is a web-based application built to assist Redcam studio owner in managing expenses, bookings, clients, and generating invoices. This README file provides an overview of the application's features, technologies used, and installation instructions.
 
 ## Features
 > RedCamStudio offers the following features:
