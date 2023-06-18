@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio Management System</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="flex items-center justify-center h-screen">
+      <div class="bg-gray-900 p-8 shadow-lg rounded-lg">
+        <div class="flex items-center justify-center mb-4">
+          <img src="logo.png" alt="Logo" class="w-20 h-10" />
+        </div>
+        <h1 class="text-2xl text-white font-bold mb-4">Login</h1>
+        <form id="loginForm">
+          <div class="mb-4">
+            <label for="username" class="block text-white">Username</label>
+            <input
+              type="text"
+              id="username"
+              class="border border-gray-300 rounded px-2 py-1 w-full"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label for="password" class="block text-white">Password</label>
+            <div class="relative">
+              <input
+                type="password"
+                id="password"
+                class="border border-gray-300 rounded px-2 py-1 w-full pr-10"
+                required
+              />
+              <button
+                type="button"
+                id="showPasswordBtn"
+                class="absolute top-0 right-0 h-full px-3 flex items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 12a2 2 0 100-4 2 2 0 000 4z"
+                    clip-rule="evenodd"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm-7.474-6.901A9.966 9.966 0 002 10c0 .897.12 1.772.346 2.625l2.557-1.422-.716-1.237zm3.459 2.542l-.964-1.669a7.981 7.981 0 001.669-.964l.964 1.669a7.981 7.981 0 00-.964 1.664zm2.542 3.459l1.669-.964a7.97 7.97 0 001.664.964l-.964 1.669a7.97 7.97 0 00-1.669-.964zm3.459-2.542l1.237-.716-1.422-2.557c.853-.226 1.728-.346 2.625-.346a9.966 9.966 0 00-3.459-3.459l-1.237.716 1.422 2.557zM10 6a4 4 0 100 8 4 4 0 000-8zm-2 4a2 2 0 114 0 2 2 0 01-4 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-red-600 hover:bg-white hover:text-red-600 text-white px-4 py-2 rounded"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+    <script>
+      // for username and password
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          var usernameInput = document.getElementById("username");
+          var passwordInput = document.getElementById("password");
+
+          var username = usernameInput.value.trim();
+          var password = passwordInput.value.trim();
+
+          if (username === "Redcam" && password === "redcam2022") {
+            window.location.href = "main.html";
+          } else {
+            usernameInput.value = "";
+            passwordInput.value = "";
+            location.reload();
+          }
+        });
+
+      // for show password
+      const passwordInput = document.getElementById("password");
+      const showPasswordBtn = document.getElementById("showPasswordBtn");
+
+      showPasswordBtn.addEventListener("click", function () {
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          showPasswordBtn.innerHTML = `
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 12a2 2 0 100-4 2 2 0 000 4z"
+          clip-rule="evenodd"
+        />
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm-7.474-6.901A9.966 9.966 0 002 10c0 .897.12 1.772.346 2.625l2.557-1.422-.716-1.237zm3.459 2.542l-.964-1.669a7.981 7.981 0 001.669-.964l.964 1.669a7.981 7.981 0 00-.964 1.664zm2.542 3.459l1.669-.964a7.97 7.97 0 001.664.964l-.964 1.669a7.97 7.97 0 00-1.669-.964zm3.459-2.542l1.237-.716-1.422-2.557c.853-.226 1.728-.346 2.625-.346a9.966 9.966 0 00-3.459-3.459l-1.237.716 1.422 2.557zM10 6a4 4 0 100 8 4 4 0 000-8zm-2 4a2 2 0 114 0 2 2 0 01-4 0z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    `;
+        } else {
+          passwordInput.type = "password";
+          showPasswordBtn.innerHTML = `
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 12a2 2 0 100-4 2 2 0 000 4z"
+          clip-rule="evenodd"
+        />
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm-7.474-6.901A9.966 9.966 0 002 10c0 .897.12 1.772.346 2.625l2.557-1.422-.716-1.237zm3.459 2.542l-.964-1.669a7.981 7.981 0 001.669-.964l.964 1.669a7.981 7.981 0 00-.964 1.664zm2.542 3.459l1.669-.964a7.97 7.97 0 001.664.964l-.964 1.669a7.97 7.97 0 00-1.669-.964zm3.459-2.542l1.237-.716-1.422-2.557c.853-.226 1.728-.346 2.625-.346a9.966 9.966 0 00-3.459-3.459l-1.237.716 1.422 2.557zM10 6a4 4 0 100 8 4 4 0 000-8zm-2 4a2 2 0 114 0 2 2 0 01-4 0z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    `;
+        }
+      });
+    </script>
+  </body>
+</html>

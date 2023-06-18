@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .bg-custom {
+      background-image: url("background/main.jpg");
+    }
+  </style>
+  <body class="bg-custom bg-cover h-screen">
+    <!-- Logo -->
+    <div class="grid items-center justify-center bg-gray-900 p-3">
+      <img src="logo.png" alt="Logo" class="w-25 h-10" />
+    </div>
+
+    <div class="flex justify-center mt-4">
+      <ul class="flex space-x-6 text-xl">
+        <li></li>
+        <li></li>
+        <li>
+          <a
+            href="clients.php"
+            class="text-gray-900 hover:text-white font-semibold hover:bg-gray-900"
+          >
+            Clients
+          </a>
+        </li>
+        <li>
+          <a
+            href="expenses.php"
+            class="text-gray-900 hover:text-white font-semibold hover:bg-gray-900"
+          >
+            Expenses
+          </a>
+        </li>
+        <li>
+          <a
+            href="InvoiceDashboard.php"
+            class="text-gray-900 hover:text-white font-semibold hover:bg-gray-900"
+          >
+            Invoice
+          </a>
+        </li>
+        <li>
+          <a
+            href="packages.html"
+            class="text-gray-900 hover:text-white font-semibold hover:bg-gray-900"
+          >
+            Packages
+          </a>
+        </li>
+        <li>
+          <a
+            href="bookings.php"
+            class="text-gray-900 hover:text-white font-semibold hover:bg-gray-900"
+          >
+            Bookings
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-900 hover:text-white font-semibold hover:bg-gray-900"
+          >
+            Other
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
